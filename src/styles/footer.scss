@@ -1,0 +1,13 @@
+@import "./yo/base.scss";
+@import "./yo/variables.scss";
+@import "./yo/reset.scss";
+footer{
+    background: red;
+    width: 100%;
+    height: .47rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 10000;
+    overflow: hidden;
+    background: #333;
+}
