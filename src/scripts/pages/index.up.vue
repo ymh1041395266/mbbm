@@ -17,6 +17,7 @@
 						<input type="text" placeholder="输入关键词或商品编号" />
 					</div>
 					<div class="banner">
+						<img src='../../media/banner.gif' alt="" />
 					</div>
 					<div class="nav">
 						<ul>
@@ -35,7 +36,112 @@
 						</ul>
 					</div>
 					<div class="templates">
+						<ul>
+							<li>
+								<div class="first" id="showfloor">
+									<div class="img">
+										<img src="../../media/bannerimg1.gif" alt="" />
+									</div>
+									<div class="right">
+										<div class="rightup">
+											<p class="a1">mbaobao</p>
+											<p class="a2"><img src="../../media/good1.gif" alt="" /></p>
+										</div>
+										<div class="rightdown">
+											<p class="a1">mbaobao</p>
+											<p class="a2"><img src="../../media/good1.gif" alt="" /></p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="two" id="showfloor">
+									<div class="img">
+										<img src="../../media/bannerimg1.gif" alt="" />
+									</div>
+									<div class="right">
+										<div class="rightup">
+											<p class="a1">mbaobao</p>
+											<p class="a2"><img src="../../media/good1.gif" alt="" /></p>
+										</div>
+										<div class="rightdown">
+											<p class="a1">mbaobao</p>
+											<p class="a2"><img src="../../media/good1.gif" alt="" /></p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="three" id="showfloor">
+									<div class="img">
+										<img src="../../media/bannerimg1.gif" alt="" />
+									</div>
+									<div class="right">
+										<div class="rightup">
+											<p class="a1">mbaobao</p>
+											<p class="a2"><img src="../../media/good1.gif" alt="" /></p>
+										</div>
+										<div class="rightdown">
+											<p class="a1">mbaobao</p>
+											<p class="a2"><img src="../../media/good1.gif" alt="" /></p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="four" id="showfloor">
+									<div class="img">
+										<img src="../../media/bannerimg1.gif" alt="" />
+									</div>
+									<div class="right">
+										<div class="rightup">
+											<p class="a1">mbaobao</p>
+											<p class="a2"><img src="../../media/good1.gif" alt="" /></p>
+										</div>
+										<div class="rightdown">
+											<p class="a1">mbaobao</p>
+											<p class="a2"><img src="../../media/good1.gif" alt="" /></p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="five" id="showfloor">
+									<div class="img">
+										<img src="../../media/bannerimg1.gif" alt="" />
+									</div>
+									<div class="right">
+										<div class="rightup">
+											<p class="a1">mbaobao</p>
+											<p class="a2"><img src="../../media/good1.gif" alt="" /></p>
+										</div>
+										<div class="rightdown">
+											<p class="a1">mbaobao</p>
+											<p class="a2"><img src="../../media/good1.gif" alt="" /></p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="six" id="showfloor">
+									<div class="img">
+										<img src="../../media/bannerimg1.gif" alt="" />
+									</div>
+									<div class="right">
+										<div class="rightup">
+											<p class="a1">mbaobao</p>
+											<p class="a2"><img src="../../media/good1.gif" alt="" /></p>
+										</div>
+										<div class="rightdown">
+											<p class="a1">mbaobao</p>
+											<p class="a2"><img src="../../media/good1.gif" alt="" /></p>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
 					</div>
+					<!--往这里插-->
 				</section>
 			</div>
 		</div>
@@ -60,7 +166,7 @@ html{
     @include flexbox();
     flex-direction: column;
     width: 100%;
-    height: 1200px;
+    height: 100%;
 }
 .touch{
 	overflow-y: scroll;
@@ -117,6 +223,8 @@ section{
         }
     }
     .banner{
+    	position: relative;
+    	z-index: 1;
         width: 100%;
         height: 1.75rem;
         background: blue;
@@ -141,9 +249,73 @@ section{
         }
     }
     .templates{
+    	height: 1032px;
         @include flex();
-        background: beige;
+        background: #fff;
         width: 100%;
+        ul{
+        	width: 100%;
+        	height: 100%;
+        	@include flexbox();
+        	flex-direction: column;
+        	li{
+        		@include flex();
+        		width: 100%;
+        		@include border(1px 0 0 0px);
+        		#showfloor{
+        			width: 100%;
+        			height: 1.5rem;
+        			@include border(0px 0 1px 0px);
+        			@include flexbox();
+        			flex-direction: row;
+        			.img{
+        				width: 2.18rem;
+        				height: 100%;
+        				overflow: hidden;
+        			}
+        			.right{
+        				@include flex();
+        				@include flexbox();
+        				flex-direction:column;
+        				.rightup{
+        					@include flex();
+        					width: 100%;
+        					p{
+        						color: #333333;
+        						display: block;
+        						font-size: .12rem;
+        						float: left;
+        					}
+        					.a1{
+        						margin-top: .15rem;
+        						margin-left: .08rem;
+        					}
+        					.a2{
+        						margin-left: .2rem;
+        					}
+        					border-bottom:1px dashed #E0E0E0;
+        				}
+        				.rightdown{
+        					@include flex();
+        					width: 100%;
+        					p{
+        						color: #333333;
+        						display: block;
+        						font-size: .12rem;
+        						float: left;
+        					}
+        					.a1{
+        						margin-top: .15rem;
+        						margin-left: .08rem;
+        					}
+        					.a2{
+        						margin-left: .2rem;
+        					}
+        				}
+        			}
+        		}
+        	}
+        }
     }
 }
 </style>
