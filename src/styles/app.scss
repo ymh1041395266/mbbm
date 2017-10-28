@@ -11,3 +11,188 @@ footer{
     overflow: hidden;
     background: #333;
 }
+html{
+    font-size: 31.25vm;
+}
+.move{
+    @include flexbox();
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.touch{
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+header{
+    background:#c7154a;
+    width: 100%;
+    height: .36rem;
+    .logo{
+        margin-left: 0.05rem;
+        margin-top: 0.05rem;
+        display: block;
+        float: left;
+        width: 1.2rem;
+        height: .2rem;
+    }
+    .shoppingcars{
+        margin-top: 0.02rem;
+        display: block;
+        float: right;
+        width: 0.4rem;
+        height: .35rem;
+    }
+    .log{
+        margin-right: 0.1rem;
+        margin-top: 0.02rem;
+        display: block;
+        float: right;
+        width: .24rem;
+        height: .37rem;
+    }
+}
+section{
+    background: #fff;
+    @include flex();
+    width: 100%;
+    @include flexbox();
+    flex-direction: column;
+    .search{
+        width: 100%;
+        height: .49rem;
+        background: #fff;
+        input{
+            border-radius: .5rem;
+            height: .3rem;
+            width: 95%;
+            padding-left: 0.1rem;
+            margin-left: 0.08rem;
+            margin-top: 0.07rem;
+            border:1px solid #969696;
+            font-size: 0.13rem;
+        }
+    }
+    .banner{
+        width: 100%;
+        height: 1.75rem;
+        overflow: hidden;
+        .mint-swipe{
+            .mint-swipe-items-wrap{
+                .mint-swipe-item is-active{
+                    @include flexbox();
+                    img{
+                        @include flex();
+                    }
+                }
+            }
+        }
+    }
+    .nav{
+        overflow: hidden;
+        width: 100%;
+        height: .96rem;
+        background: gray;
+        ul{
+            width: 100%;
+            height: 100%;
+            @include flexbox();
+            a{
+                 height: 100%;
+                @include flex();
+                background: white;
+                li{
+                    height: 100%;
+                    @include flex();
+                    background: white;
+                    a{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .templates{
+        height: 1032px;
+        @include flex();
+        background: #fff;
+        width: 100%;
+        ul{
+            width: 100%;
+            height: 100%;
+            @include flexbox();
+            flex-direction: column;
+            li{
+                @include flex();
+                width: 100%;
+                @include border(1px 0 0 0px);
+                #showfloor{
+                    width: 100%;
+                    height: 1.5rem;
+                    @include border(0px 0 1px 0px);
+                    @include flexbox();
+                    flex-direction: row;
+                    .img{
+                        width: 2.18rem;
+                        height: 100%;
+                        overflow: hidden;
+                        img{
+                         width: 2.18rem;  
+                         height: 100%; 
+                        }
+                    }
+                    .right{
+                        @include flex();
+                        @include flexbox();
+                        flex-direction:column;
+                        .rightup{
+                            @include flex();
+                            width: 100%;
+                            p{
+                                color: #333333;
+                                display: block;
+                                font-size: .12rem;
+                                float: left;
+                                img{
+                                    width: .65rem;
+                                    height: .65rem;
+                                }
+                            }
+                            .a1{
+                                margin-top: .15rem;
+                                margin-left: .08rem;
+                            }
+                            .a2{
+                                margin-left: .2rem;
+                            }
+                            border-bottom:1px dashed #E0E0E0;
+                        }
+                        .rightdown{
+                            @include flex();
+                            width: 100%;
+                            p{
+                                color: #333333;
+                                display: block;
+                                font-size: .12rem;
+                                float: left;
+                                img{
+                                    width: .65rem;
+                                    height: .65rem;
+                                }
+                            }
+                            .a1{
+                                margin-top: .15rem;
+                                margin-left: .08rem;
+                            }
+                            .a2{
+                                margin-left: .2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

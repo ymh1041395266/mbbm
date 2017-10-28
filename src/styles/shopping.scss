@@ -1,0 +1,92 @@
+@import "./yo/base.scss";
+@import "./yo/variables.scss";
+@import "./yo/reset.scss";
+.car-roots{
+    width: 100%;
+    height: 70%;
+    background: yellow;
+    section{
+        @include flexbox();
+        flex-direction: column;
+        background: white;
+        height: 3.72rem;
+        width: 100%;
+        @for $i from 1 through 4{
+            .logging#{$i}{
+                @include flex();
+                 width: 100%;
+            }
+            .logging1{
+                @include flexbox();
+                flex-direction: column;
+                height: 1.5rem;
+                input{
+                    @include flex();
+                    margin-top: .4rem;
+                    width: 2.62rem;
+                    margin-left: .59rem;
+                    border-radius: .07rem;
+                    border: 1px solid #333333;
+                }
+            }
+            .logging2{
+                height: 1.1rem;
+                @include flexbox();
+                flex-direction: column;
+                button{
+                    margin: auto;
+                    margin-top: .36rem;
+                    width:2.58rem;
+                    height: .4rem;
+                    background: #C6204D;
+                    color: white;
+                    font-size: .18rem;
+                    border-radius: .05rem;
+                }
+                span{
+                    color: #555;
+                    text-decoration: underline;
+                    font-size: .14rem;
+                    margin-left: 2.6rem;
+                }
+            }
+            .logging3{
+                @include flex();
+                @include flexbox();
+                flex-direction: column;
+                height: .61rem;
+               p{
+                   @include flex();
+                   color: #666666;
+                   font-size: .14rem;  
+                   height: 50%;
+                   width: 1rem;
+                   margin-left: .1rem;
+                   margin-top: -.2rem;
+               }
+               ul{
+                   @include flex();
+                   @include flexbox();
+                   flex-direction: row;
+                   height: 50%;
+                   width: 1.85rem;
+                   li{
+                       @include flex();
+                       margin-left: .03rem;
+                       margin-top: -.2rem;
+                   }
+               }
+            }
+            .logging4{
+                @include flexbox();
+                flex-direction:row;
+                height: .5rem;
+                   color: #666666;
+                   font-size: .14rem;  
+                   p{
+                       margin-left: .09rem;
+                   }
+            }
+        }
+    }
+}

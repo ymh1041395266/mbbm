@@ -14,18 +14,32 @@ module.exports={
 		filename:'[name]@[chunkhash].js',
 		path:__dirname+'/dev'//必须是绝对路径
 	},
-	//配置webserver
-	devServer:{
-		host:'localhost',
-		port:4000,
-		contentBase:__dirname+'/dev',
-		noInfo:true//屏蔽信息
-	},//devServer的名字不能瞎写
-	//devtool配置
+	  devServer: {
+			host:"172.27.98.1",
+			port:4000,
+			contentBase:__dirname+'/dev',
+			noInfo:true,//屏蔽信息
+	    proxy: {
+	 			'/api':{
+		        target:'https://m.mbaobao.com/',
+		        changeOrigin: true,
+		        pathRewrite: {
+		          '^/api': ''
+		        }
+		     },
+			  '/vip':{
+			    target: 'http://localhost:9000/',
+			    changeOrigin: true,
+			    pathRewrite: {
+			      '^/vip': ''
+			    }
+			  }
+	   		 }
+	  },
 	devtool:'source-map',
     resolve: {
 	      alias: {
-	      'vue$': 'vue/dist/vue.js',
+	      'vue$': 'vue/dist/vue.esm.js',
 	      'styles': __dirname + '/src/styles'
 	    }
   	},
@@ -40,6 +54,15 @@ module.exports={
 			use:[
 				{
 					loader:'babel-loader'//应用babel-loader解析ES6
+				}
+			]
+		},
+		{
+			test:/\.string$/,
+			exclude:/node_modules/,
+			use:[
+				{
+					loader:'string-loader'//应用babel-loader解析ES6
 				}
 			]
 		},
@@ -78,7 +101,7 @@ module.exports={
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          limit: 1000,
+          limit: 10,
           name: 'media/images/[name].[ext]'
         }
       },
@@ -128,4 +151,34 @@ module.exports={
   		}
   	})
   ]
+// ,
+//////externals
+//	externals:{
+//		'vue':'window.Vue',
+//		'axios':'window.axios'
+//	}
 }
+//var devserver = { // 配置webserver
+//devServer: {
+//		host:'localhost',
+//		port:4000,
+//		contentBase:__dirname+'/dev',
+//		noInfo:true,//屏蔽信息
+//  proxy: {
+// 			'/api':{
+//	        target:'https://m.mbaobao.com/',
+//	        changeOrigin: true,
+//	        pathRewrite: {
+//	          '^/api': ''
+//	        }
+//	     },
+//		  '/vip': {
+//		    target: 'http://localhost:9000/',
+//		    changeOrigin: true,
+//		    pathRewrite: {
+//		      '^/vip': ''
+//		    }
+//		  }
+//  }
+//}
+//}
