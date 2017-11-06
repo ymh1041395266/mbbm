@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>mbb</name>
-	<comment>Create By HBuilder</comment>
+	<name>my-project</name>
+	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -16,43 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1508287574172</id>
-			<name></name>
-			<type>10</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.orFilterMatcher</id>
-				<arguments>
-					<matcher>
-						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-matches-false-false-bin</arguments>
-					</matcher>
-					<matcher>
-						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-matches-false-false-setting</arguments>
-					</matcher>
-				</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1508831598586</id>
-			<name></name>
-			<type>26</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-node_modules</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1508831598592</id>
-			<name></name>
-			<type>26</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-node_modules</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1508856662706</id>
+			<id>1508767107913</id>
 			<name></name>
 			<type>26</type>
 			<matcher>

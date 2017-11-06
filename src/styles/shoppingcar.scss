@@ -1,0 +1,16 @@
+@import "./yo/base.scss";
+@import "./yo/variables.scss";
+@import "./yo/reset.scss";
+
+section{
+    @include flexbox();
+    @include flex-direction(column);
+    height: 2.59rem;
+    width: 100%;
+    .bottom{
+        @include flex();
+        height: 1.5rem;
+        background: red;
+        width: 100%;
+    }
+}

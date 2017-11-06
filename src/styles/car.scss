@@ -1,0 +1,31 @@
+@import "./yo/base.scss";
+@import "./yo/variables.scss";
+@import "./yo/reset.scss";
+.car-body{
+    background: white;
+    .title{
+        @include flexbox();
+        @include flex-direction(column);
+        width: 100%;
+        height: .38rem;
+        @include border(0 0 1px 0);
+        font-size: .12rem;
+        text-align: center;
+        line-height: .38rem;
+    }
+    .body{
+        .goodshow{
+            @include flexbox();
+            @include flex-direction(row);
+            img,.name,.price{
+                @include flex();
+                text-align: center;
+            }
+            .opr{
+                height: 100%;
+                width: .5rem;
+                text-align: center;
+            }
+        }
+    }
+}

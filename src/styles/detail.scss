@@ -1,0 +1,64 @@
+@import "./yo/base.scss";
+@import "./yo/variables.scss";
+@import "./yo/reset.scss";
+#root{
+    @include flexbox();
+    @include flex-direction(column);
+    width:100%;
+    height: 100%;
+}
+.up,.middle,.foot,.bottom{
+    @include flexbox();
+    width: 100%;
+}
+.up{
+    height: 4.67rem;
+    @include justify-content(center);
+    @include align-items(center);
+        img{
+        width: 90%;
+        height: 90%;
+        border-radius: .1rem;
+    }
+}
+.middle{
+    height: .97rem;
+    @include flexbox();
+    @include flex-direction(column);
+    .title{
+        font-size: .16rem;
+        color: #525659;
+        text-align: center;
+        font-weight: 900;
+    }
+    .price{
+        font-size: .14rem;
+        color: darkblue;
+        font-weight: 900;
+        margin-left: .5rem;
+    }
+}
+.foot{
+    @include flexbox();
+    @include flex-direction(row);
+    height: .33rem;
+    background: #FAFAFA;
+    .name{
+        span{
+            text-align: center;  
+        }
+    }
+}
+.bottom{
+    width: 100%;
+    height: .4rem;
+    .btn{
+        width: 2rem;
+        height: .4rem;
+        margin: auto;
+        background: #F86504;
+        border-radius: .08rem;
+        color: #fff;
+        font-size: .14rem;
+    }
+}

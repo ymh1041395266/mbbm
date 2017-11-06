@@ -1,0 +1,56 @@
+@import "./yo/base.scss";
+@import "./yo/variables.scss";
+@import "./yo/reset.scss";
+#root{
+    width: 100%;
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    section{
+        @include flexbox();
+        @include flex-direction(column);
+        .title{
+            width: 100%;
+            height: .55rem;
+            font-size: .17rem;
+            color: #CB2B5A;
+            text-align: center;
+            font-weight: 900;
+        }
+        .rb{
+            width: 100%;
+            height: 2.70rem;
+            text-align: center;
+            input{
+                width: 2.60rem;
+                height: .37rem;
+                border-radius: .06rem;
+                margin-top: .15rem;
+                font-size: .17rem;
+                color: #7575A0;
+                padding-left: .11rem;
+            }
+            .identify{
+                width: 1.5rem;
+                margin-left: 1rem;
+            }
+            img{
+                width: .2rem;
+                height: .2rem;
+            }
+        }
+        .btn{
+            @include flex();
+            width: 100%;
+            text-align: center;
+            button{
+                width: 2.61rem;
+                height: .41rem;
+                border-radius: .1rem;
+                background: #C6204D;
+                font-size: .18rem;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

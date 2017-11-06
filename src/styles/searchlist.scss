@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'yofont';
+  src: url('../assets/images/iconfont/iconfont.woff') format('woff'), url('../assets/images/iconfont/iconfont.ttf') format('truetype')
+}
+#searchlistContainer{
+    width: 100%;
+    height: auto;
+    @include flexbox();
+    @include flex-direction(column);
+    .head{
+        @include flexbox();
+        @include flex();
+        @include flex-direction(row);
+        width: 100%;
+        height: .35rem;
+        background: #c7154a;
+        .back{
+            width: .6rem;
+            @include flex();
+            height: 100%;
+            line-height: .35rem;
+            color: white;
+            margin-left: .1rem;
+        }
+        span{
+            text-align: center;
+            color: white;
+            font-weight: 900;
+            line-height: .35rem;
+            width: 2rem;
+        }
+        .topsign{
+            height: 100%;
+            width: .8rem;
+            margin-left: .1rem;
+        }
+    }
+    .nav{
+        @include flex();
+        width: 100%;
+        height:.54rem;
+        background:white;
+        ul{
+            width: 100%;
+            height: 100%;
+            @include flexbox();
+            @include flex-direction(row);
+            li{
+                @include flex();
+                height: 100%;
+                text-align: center;
+                font-size: .17rem;
+                font-weight: 900;
+                line-height: .4rem;
+                b{
+                }
+            }
+        }
+    }
+}
+#show{
+    width: 100%;
+    height: auto;
+    @include flexbox();
+    @include flex-direction(column)
+}
+.active{
+     border-bottom: 3px solid black;
+}
+.show{
+    display: none;
+}
+.chooselist{
+    width: .80rem;
+    height: 1.45rem;
+    background: #c7204E;
+    position: absolute;
+    z-index: 1000;
+    margin-top: .1rem;
+    right: .05rem;
+    border-radius: 0.04rem;
+    ul{
+        @include flexbox();
+        @include flex-direction(column);
+        width: 100%;
+        height: 100%;
+        li{
+            @include flex();
+            width: 100%;
+            @include border(0 0 1px 0);
+            color: white;
+            text-align: center;
+            i{
+                display: inline-block;
+                padding-top: .01rem;
+                padding-right: 0.2rem;
+                font-size: .14rem;
+            }
+            b{
+                display: inline-block;
+                padding-top: .07rem;
+                font-size: .14rem;
+            }
+        }
+        li:hover{
+            background: orangered;
+        }
+    }
+}
